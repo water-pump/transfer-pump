@@ -206,25 +206,25 @@
         .sub-link-sidebar {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 4px;
         }
 
         .btn-sub-web {
             background: linear-gradient(135deg, #bf953f 0%, #d4af37 50%, #aa771c 100%);
             color: #0a0b0d;
-            padding: 3px 4px;
-            border-radius: 5px;
+            padding: 2px 3px;
+            border-radius: 4px;
             border: 1px solid #ffe57f;
             text-decoration: none;
-            font-size: 0.6rem;
-            font-weight: 800;
+            font-size: 0.52rem;
+            font-weight: 700;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            min-height: 32px;
-            line-height: 1.15;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+            min-height: 24px;
+            line-height: 1.1;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
             word-break: break-word;
         }
         .btn-sub-web:active, .btn-sub-web:hover {
@@ -286,32 +286,41 @@
         /* 6. WEB BUTTON & BOTTOM CONTACT BUTTONS */
         .web-btn-wrapper {
             text-align: center;
-            margin: 10px 0 6px 0;
+            margin: 12px auto 8px auto;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .btn-web { 
             background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%); 
             color: #111111; 
-            font-size: 0.8rem; 
-            padding: 7px 10px; 
-            border: 1px solid #ffe57f;
-            width: 100%;
-            border-radius: 25px;
-            display: flex;
+            font-size: 0.88rem; 
+            padding: 12px 24px; 
+            border: 1.5px solid #ffe57f;
+            width: fit-content;
+            max-width: 340px;
+            min-width: 260px;
+            border-radius: 30px;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
+            gap: 8px;
             font-weight: 800;
             text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-web:active {
+            transform: scale(0.98);
         }
 
         .btn-web-logo {
-            width: 18px;
-            height: 18px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
-            border: 1px solid #000;
+            border: 1.5px solid #111;
             object-fit: cover;
         }
 
@@ -324,7 +333,6 @@
             line-height: 1.2;
         }
 
-        /* ปุ่มติดต่อด้านล่างขนาดกะทัดรัด */
         .btn-group-bottom {
             display: flex;
             flex-direction: row;
@@ -371,11 +379,21 @@
             .card { padding: 10px; }
             .card h3 { font-size: 0.88rem; }
             .card ul li { font-size: 0.75rem; }
-            .btn-sub-web { font-size: 0.72rem; min-height: 38px; padding: 4px 6px; }
+            .btn-sub-web { font-size: 0.65rem; min-height: 30px; padding: 3px 5px; }
             .section-title { font-size: 0.95rem; }
             header h1 { font-size: 1.3rem; }
             .hero-card h2 { font-size: 1.15rem; }
             .btn-bottom { font-size: 0.8rem; min-height: 34px; }
+            
+            .btn-web {
+                font-size: 0.95rem;
+                padding: 14px 32px;
+                max-width: 400px;
+            }
+            .btn-web-logo {
+                width: 26px;
+                height: 26px;
+            }
         }
     </style>
 </head>
@@ -391,47 +409,51 @@
         <div class="hero-card">
             <h2>ช่างซ่อมและติดตั้งปั๊มน้ำ ปั๊มอาคารคอนโด บ้านพักอาศัย</h2>
             <p>บริการซ่อมและติดตั้งปั๊มน้ำ Booster Pump, Transfer Pump, ปั๊มจุ่ม, ไดโว่, ปั๊มสูบน้ำเสีย ตู้คอนโทรลปั๊มน้ำ สำหรับอาคาร คอนโด โรงงาน หมู่บ้าน และบ้านพักอาศัย</p>
-            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTXIwI-n_VKM7XIqhIozgbYgMr1wyJ6i9e67hyGGyW84CGW9EjFzFr5xWOZdZuodcMpYY7j7LOEo75oDOM" alt="ช่างซ่อมปั๊มน้ำ อาคาร คอนโด" class="hero-img">
+            <img src="hero-banner.jpg" alt="ช่างซ่อมปั๊มน้ำ อาคาร คอนโด เคเอส เซอร์วิส 89" class="hero-img">
         </div>
 
         <!-- Main Layout: ซ้าย 74% / ขวา 24% -->
         <div class="main-content-layout">
             <!-- ฝั่งซ้าย: งานบริการหลัก -->
             <div class="services-column">
-                <h2 class="section-title">งานซ่อมปั๊มน้ำ</h2>
+                <h2 class="section-title">งานซ่อมและติดตั้งปั๊มน้ำและปั๊มสูบน้ำ</h2>
                 <div class="grid">
                     <div class="card">
-                        <h3>🛠️ งานซ่อมติดตั้งปั๊มน้ำ</h3>
-                        <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTXIwI-n_VKM7XIqhIozgbYgMr1wyJ6i9e67hyGGyW84CGW9EjFzFr5xWOZdZuodcMpYY7j7LOEo75oDOM" alt="ช่างซ่อมติดตั้งปั๊มน้ำ" class="img-responsive">
+                        <h3>🛠️ รับงานบริการซ่อมและติดตั้งปั๊มน้ำ อาคาร โรงงาน</h3>
+                        <img src="service-pump.jpg" alt="ช่างซ่อมติดตั้งปั๊มน้ำ Booster Pump โรงงาน คอนโด" class="img-responsive">
                         <ul>
-                            <li>ปั๊มน้ำอาคาร, คอนโด, โรงงาน</li>
-                            <li>ซ่อมตู้คอนโทรลปั๊มน้ำ</li>
-                            <li>ระบบ Booster / Transfer Pump</li>
+                            <li>ปั๊มน้ำอาคาร, คอนโด, โรงงาน, บ้านพักอาศัย</li>
+                            <li>ซ่อมและติดตั้งปั๊มน้ำ (ระบบคอนโทรลปั๊มน้ำ)</li>
+                            <li>ระบบ Booster Pump (เปลี่ยนถังแรงดัน)</li>
+                            <li>ระบบ Transfer Pump (ปั๊มส่งน้ำขึ้นอาคาร)</li>
                         </ul>
                     </div>
                     <div class="card">
-                        <h3>🌊 ปั๊มจุ่ม ไดโว่ พญานาค</h3>
-                        <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSLGxqdjO_6C4uEbKHHZLWSVtb6GfRbVAIunYUEqe3ESmjMarelCm_TdIM-4uTP_Z3SnRDPdlpDQtHi_Jg" alt="ปั๊มจุ่ม ไดโว่" class="img-responsive">
+                        <h3>🌊 ระบบสูบน้ำ & ปั๊มจุ่ม ไดโว่ ปั๊มพญานาคไฟฟ้า</h3>
+                        <img src="service-submersible.jpg" alt="บริการซ่อมปั๊มจุ่ม ไดโว่ ปั๊มสูบน้ำเสีย" class="img-responsive">
                         <ul>
                             <li>ปั๊มสูบน้ำ, ปั๊มจุ่ม, ไดโว่</li>
-                            <li>ซ่อมปั๊มสูบน้ำเสีย</li>
-                            <li>ท่อสูบน้ำพญานาค</li>
+                            <li>ปั๊มสูบน้ำเสียซ่อม (ระบบคอนโทรลปั๊มสูบน้ำ)</li>
+                            <li>ซ่อม ท่อสูบน้ำพญานาค หมู่บ้าน โรงงาน</li>
                         </ul>
                     </div>
                     <div class="card">
-                        <h3>🔧 ท่อประปา PVC, PPR</h3>
-                        <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcScVMXoNJGIcfx6rKdwVJn_izC_imgnWd1Hc6jK5qnNX8bfR95eFkf1wVXXrw165FtYpemdWfcGGoS3yhA" alt="งานระบบท่อประปา" class="img-responsive">
+                        <h3>🔧 งานระบบท่อประปา PVC, PPR</h3>
+                        <img src="service-pipe.jpg" alt="ช่างเดินงานระบบท่อประปา PVC PPR" class="img-responsive">
                         <ul>
-                            <li>เดินระบบท่อ PVC / PPR</li>
-                            <li>ติดตั้งตู้คอนโทรล</li>
+                            <li>เดินระบบท่อประปา PVC</li>
+                            <li>ติดตั้งและเชื่อมท่อ PPR (ท่อเชื่อมความร้อน)</li>
+                            <li>งานตู้คอนโทรลปั๊มน้ำ</li>
+                            <li>เดินระบบท่อประปา อาคาร โรงงาน และบ้านพักอาศัย</li>
                         </ul>
                     </div>
                     <div class="card">
-                        <h3>🏠 ปั๊มน้ำบ้านพักอาศัย</h3>
-                        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSAfcKxnJTjRIozE4P1QUd2RMe7JEf-nLQZGJd6G6jvvCG_FyoSKy8eGSMbjdto8l1Y5ij_OS1PN59aRSI" alt="ซ่อมปั๊มน้ำบ้าน" class="img-responsive">
+                        <h3>🏠 บริการซ่อมติดตั้งปั๊มน้ำบ้านพักอาศัย</h3>
+                        <img src="service-home.jpg" alt="ช่างซ่อมปั๊มน้ำใกล้ฉัน งานซ่อมปั๊มน้ำบ้านพักอาศัย" class="img-responsive">
                         <ul>
-                            <li>ช่างซ่อมปั๊มน้ำใกล้ฉัน</li>
+                            <li>ช่างซ่อมปั๊มน้ำใกล้ฉัน ซ่อมปั๊มน้ำติดตั้งปั๊มน้ำ</li>
                             <li>แก้ไขประปารั่วใต้พื้น</li>
+                            <li>เดินระบบท่อน้ำดีใหม่ และตรวจสอบระบบปั๊มน้ำ</li>
                         </ul>
                     </div>
                 </div>
@@ -441,20 +463,20 @@
             <div class="sidebar-column">
                 <h2 class="section-title">บริการอื่นๆ</h2>
                 <div class="sub-link-sidebar">
-                    <a href="https://repair.ksservice89.com" target="_blank" rel="noopener" class="btn-sub-web">ซ่อมเปลี่ยนถังแรงดัน</a>
-                    <a href="https://home-water-pump.ksservice89.com" target="_blank" rel="noopener" class="btn-sub-web">ปั๊มน้ำบ้านพักอาศัย</a>
-                    <a href="https://pump.ksservice89.com" target="_blank" rel="noopener" class="btn-sub-web">ปั๊มอาคาร โรงงาน</a>
-                    <a href="https://divo.ksservice89.com/" target="_blank" rel="noopener" class="btn-sub-web">ปั๊มจุ่ม ไดโว่ พญานาค</a>
-                    <a href="https://maintenance.ksservice89.com" target="_blank" rel="noopener" class="btn-sub-web">ซ่อมบำรุง PM ปั๊มน้ำ</a>
-                    <a href="https://maps.google.com/?cid=123456789" target="_blank" rel="noopener" class="btn-sub-web">📍 ช่างปั๊มใกล้ฉัน</a>
+                    <a href="https://repair.ksservice89.com" target="_blank" rel="noopener" class="btn-sub-web">รับงานซ่อมเปลี่ยนถังแรงดันปั๊มน้ำ</a>
+                    <a href="https://home-water-pump.ksservice89.com" target="_blank" rel="noopener" class="btn-sub-web">ปั๊มน้ำดีปั๊มสูบน้ำบ้านพักอาศัย</a>
+                    <a href="https://pump.ksservice89.com" target="_blank" rel="noopener" class="btn-sub-web">ปั๊มน้ำอาคารโรงงานคอนโด</a>
+                    <a href="https://divo.ksservice89.com/" target="_blank" rel="noopener" class="btn-sub-web">ปั๊มจุ่มไดโว่ปั๊มสูบพญานาคไฟฟ้า</a>
+                    <a href="https://maintenance.ksservice89.com" target="_blank" rel="noopener" class="btn-sub-web">รับซ่อมบำรุง PM ระบบปั๊มน้ำ</a>
+                    <a href="https://maps.google.com/?cid=123456789" target="_blank" rel="noopener" class="btn-sub-web">📍 หาค่าปั๊มน้ำที่ใกล้ฉัน</a>
                 </div>
             </div>
         </div>
 
         <!-- Location Box -->
         <div class="location-box">
-            <h2 class="section-title">📍 พื้นที่ให้บริการ</h2>
-            <p>เขตกรุงเทพฯฝั่งตะวันออก จังหวัดสมุทรปราการ & พื้นที่ใกล้เคียง <a href="tel:0827127490">โทร 082-712-7490</a></p>
+            <h2 class="section-title">📍 พื้นที่ให้บริการ (Locations / Service Areas)</h2>
+            <p>ให้บริการเขตกรุงเทพฯฝั่งตะวันออก จังหวัดสมุทรปราการ & พื้นที่ใกล้เคียง โทรติดต่อสอบถามได้ครับ <a href="tel:0827127490">โทร 082-712-7490</a></p>
             <div class="tag-container">
                 <span class="tag">บางนา</span>
                 <span class="tag">ประเวศ</span>
@@ -465,11 +487,22 @@
                 <span class="tag">สวนหลวง</span>
                 <span class="tag">พัฒนาการ</span>
                 <span class="tag">กรุงเทพฯกรีฑา</span>
+                <span class="tag">คลองตัน</span>
                 <span class="tag">สุขุมวิท</span>
                 <span class="tag">ศรีนครินทร์</span>
                 <span class="tag">ลาดกระบัง</span>
+                <span class="tag">บางจาก</span>
+                <span class="tag">วัฒนา</span>
+                <span class="tag">เอกมัย</span>
+                <span class="tag">พระโขนง</span>
                 <span class="tag">กิ่งแก้ว</span>
+                <span class="tag">สำโรง</span>
+                <span class="tag">ราชาเทวะ</span>
+                <span class="tag">ราม 2</span>
+                <span class="tag">บางแก้ว</span>
+                <span class="tag">หนามแดง</span>
                 <span class="tag">บางพลี</span>
+                <span class="tag">กรุงเทพฯฝั่งตะวันออก</span>
                 <span class="tag">สมุทรปราการ</span>
             </div>
         </div>
@@ -477,14 +510,14 @@
         <!-- Web Link & SEO Text -->
         <div class="web-btn-wrapper">
             <div class="seo-faint-text">
-                ช่างซ่อมปั๊มน้ำ พื้นที่ให้บริการ • ช่างปั๊มน้ำบางนา • ช่างปั๊มน้ำประเวศ • ช่างปั๊มน้ำอุดมสุข • ช่างปั๊มน้ำอ่อนนุช • ช่างปั๊มน้ำศรีนครินทร์
+                ช่างซ่อมปั๊มน้ำ พื้นที่ให้บริการ • ช่างปั๊มน้ำบางนา • ช่างปั๊มน้ำประเวศ • ช่างปั๊มน้ำอุดมสุข • ช่างปั๊มน้ำลาซาล • ช่างปั๊มน้ำแบริ่ง • ช่างปั๊มน้ำอ่อนนุช • ช่างปั๊มน้ำสวนหลวง • ช่างปั๊มน้ำพัฒนาการ • ช่างปั๊มน้ำกรุงเทพฯกรีฑา • ช่างปั๊มน้ำคลองตัน • ช่างปั๊มน้ำสุขุมวิท • ช่างปั๊มน้ำศรีนครินทร์
             </div>
             <a href="https://www.ksservice89.com" target="_blank" class="btn-web">
-                <img src="logo.png" alt="Logo" class="btn-web-logo">
+                <img src="logo.png" alt="Logo KS Service 89" class="btn-web-logo">
                 <span>เว็บไซต์หลัก www.ksservice89.com</span>
             </a>
             <div class="seo-faint-text">
-                ช่างปั๊มน้ำลาดกระบัง • ช่างปั๊มน้ำกิ่งแก้ว • ช่างปั๊มน้ำบางพลี • ช่างปั๊มน้ำสมุทรปราการ • ช่างซ่อมปั๊มน้ำใกล้ฉัน
+                ช่างปั๊มน้ำลาดกระบัง • ช่างปั๊มน้ำบางจาก • ช่างปั๊มน้ำวัฒนา • ช่างปั๊มน้ำเอกมัย • ช่างปั๊มน้ำพระโขนง • ช่างปั๊มน้ำกิ่งแก้ว • ช่างปั๊มน้ำสำโรง • ช่างปั๊มน้ำราชาเทวะ • ช่างปั๊มน้ำราม 2 • ช่างปั๊มน้ำบางแก้ว • ช่างปั๊มน้ำหนามแดง • ช่างปั๊มน้ำบางพลี • ช่างปั๊มน้ำสมุทรปราการ • ช่างซ่อมปั๊มน้ำใกล้ฉัน
             </div>
         </div>
 
