@@ -116,17 +116,6 @@
             color: #e0e0e0;
             line-height: 1.35;
         }
-        /* แก้ไขภาพ Hero ให้แสดงเต็มภาพ ไม่ถูกตัดความสูง */
-        .hero-img {
-            width: 100%;
-            height: auto;
-            max-height: none;
-            object-fit: contain;
-            border-radius: 8px;
-            margin: 8px 0 4px 0;
-            border: 1px solid rgba(212, 175, 55, 0.4);
-            display: block;
-        }
 
         /* 3. MAIN LAYOUT (ซ้าย 74% / ขวา 24%) */
         .main-content-layout {
@@ -166,7 +155,7 @@
             margin-bottom: 4px;
         }
 
-        /* แก้ไขสไตล์รูปภาพการ์ด ให้แสดงภาพเต็มสัดส่วนอัตโนมัติ */
+        /* สไตล์รูปภาพในการ์ด */
         .img-responsive {
             width: 100%;
             height: auto;
@@ -201,10 +190,14 @@
             font-size: 0.65rem;
         }
 
-        /* 4. SIDEBAR COLUMN */
+        /* 4. SIDEBAR COLUMN (ทำเป็น Sticky ลอยเลื่อนตามหน้าจอ) */
         .sidebar-column {
             display: flex;
             flex-direction: column;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 10px;
+            z-index: 10;
         }
 
         .sub-link-sidebar {
@@ -411,7 +404,6 @@
         <div class="hero-card">
             <h2>ช่างซ่อมและติดตั้งปั๊มน้ำ ปั๊มอาคารคอนโด บ้านพักอาศัย</h2>
             <p>บริการซ่อมและติดตั้งปั๊มน้ำ Booster Pump, Transfer Pump, ปั๊มจุ่ม, ไดโว่, ปั๊มสูบน้ำเสีย ตู้คอนโทรลปั๊มน้ำ สำหรับอาคาร คอนโด โรงงาน หมู่บ้าน และบ้านพักอาศัย</p>
-            <img src="hero-banner.jpg" alt="ช่างซ่อมปั๊มน้ำ อาคาร คอนโด เคเอส เซอร์วิส 89" class="hero-img">
         </div>
 
         <!-- Main Layout: ซ้าย 74% / ขวา 24% -->
@@ -461,7 +453,7 @@
                 </div>
             </div>
 
-            <!-- ฝั่งขวา: แถบบริการย่อย -->
+            <!-- ฝั่งขวา: แถบบริการย่อย (Sticky Floating Sidebar) -->
             <div class="sidebar-column">
                 <h2 class="section-title">บริการอื่นๆ</h2>
                 <div class="sub-link-sidebar">
