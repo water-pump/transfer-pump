@@ -47,7 +47,7 @@
             background-attachment: fixed;
             color: #ffffff;
             line-height: 1.4;
-            padding-bottom: 70px;
+            padding-bottom: 30px;
             overflow-x: hidden;
         }
 
@@ -96,7 +96,7 @@
             background: linear-gradient(135deg, rgba(191, 149, 63, 0.15), rgba(170, 119, 28, 0.25));
             border: 1px solid rgba(212, 175, 55, 0.5);
             color: #ffffff;
-            padding: 14px 10px;
+            padding: 12px 10px;
             border-radius: 12px;
             text-align: center;
             box-shadow: 0 6px 20px rgba(0,0,0,0.6);
@@ -105,57 +105,30 @@
         }
         .hero-card h2 {
             color: #f1c40f;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 800;
             line-height: 1.3;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
         .hero-card p {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 400;
             color: #e0e0e0;
-            margin-bottom: 12px;
             line-height: 1.35;
         }
-        .btn-group-hero {
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            justify-content: center;
+        .hero-img {
             width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 8px 0 4px 0;
+            border: 1px solid rgba(212, 175, 55, 0.4);
         }
 
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 8px 10px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: all 0.2s ease;
-            text-align: center;
-            min-height: 36px;
-        }
-        .btn-call { 
-            background: linear-gradient(145deg, #00d659, #00993e);
-            color: #ffffff; 
-            box-shadow: 0 4px 12px rgba(0, 200, 83, 0.3);
-            border: none;
-        }
-        .btn-line { 
-            background: linear-gradient(145deg, #06c755, #00b341);
-            color: #ffffff; 
-            box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
-            border: none;
-        }
-
-        /* 3. LAYOUT แบ่งซ้าย-ขวา */
+        /* 3. MAIN LAYOUT (ซ้าย 74% / ขวา 24%) */
         .main-content-layout {
             display: grid;
-            grid-template-columns: 74% 24%; /* ขยายเนื้อหาซ้าย 74% / ปรับ แถบบริการย่อยขวา 24% */
+            grid-template-columns: 74% 24%;
             gap: 2%;
             margin-bottom: 12px;
             align-items: start;
@@ -192,7 +165,7 @@
 
         .img-responsive {
             width: 100%;
-            height: 95px;
+            height: 100px;
             aspect-ratio: 16 / 9;
             object-fit: cover;
             border-radius: 5px;
@@ -224,7 +197,7 @@
             font-size: 0.65rem;
         }
 
-        /* 4. แถบขวา: ปรับขนาดให้เล็กลง กระชับ และเข้าทรงสวยงาม */
+        /* 4. SIDEBAR COLUMN */
         .sidebar-column {
             display: flex;
             flex-direction: column;
@@ -243,7 +216,7 @@
             border-radius: 5px;
             border: 1px solid #ffe57f;
             text-decoration: none;
-            font-size: 0.6rem; /* ขนาดตัวอักษรเล็กกะทัดรัด */
+            font-size: 0.6rem;
             font-weight: 800;
             display: flex;
             justify-content: center;
@@ -271,6 +244,7 @@
             letter-spacing: 0.2px;
         }
 
+        /* 5. LOCATION BOX */
         .location-box {
             background: rgba(18, 20, 26, 0.9);
             color: #ffffff;
@@ -309,20 +283,21 @@
             border: 1px solid rgba(212, 175, 55, 0.3);
         }
 
+        /* 6. WEB BUTTON & BOTTOM CONTACT BUTTONS */
         .web-btn-wrapper {
             text-align: center;
-            margin: 12px 0;
+            margin: 10px 0 6px 0;
             width: 100%;
         }
         
         .btn-web { 
             background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%); 
             color: #111111; 
-            font-size: 0.82rem; 
-            padding: 8px 10px; 
+            font-size: 0.8rem; 
+            padding: 7px 10px; 
             border: 1px solid #ffe57f;
             width: 100%;
-            border-radius: 30px;
+            border-radius: 25px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -333,8 +308,8 @@
         }
 
         .btn-web-logo {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             border-radius: 50%;
             border: 1px solid #000;
             object-fit: cover;
@@ -349,36 +324,76 @@
             line-height: 1.2;
         }
 
-        /* Responsive สำหรับจอแท็บเล็ตและคอมพิวเตอร์ */
+        .btn-group-bottom {
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+            justify-content: center;
+            width: 100%;
+            max-width: 320px;
+            margin: 10px auto 0 auto;
+        }
+
+        .btn-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            padding: 5px 8px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: all 0.2s ease;
+            text-align: center;
+            min-height: 30px;
+        }
+        .btn-call-bottom { 
+            background: linear-gradient(145deg, #00d659, #00993e);
+            color: #ffffff; 
+            box-shadow: 0 3px 8px rgba(0, 200, 83, 0.3);
+            border: none;
+        }
+        .btn-line-bottom { 
+            background: linear-gradient(145deg, #06c755, #00b341);
+            color: #ffffff; 
+            box-shadow: 0 3px 8px rgba(6, 199, 85, 0.3);
+            border: none;
+        }
+
+        /* RESPONSIVE */
         @media (min-width: 768px) {
             .container { padding: 0 12px; }
             .grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
             .img-responsive { height: 130px; }
+            .hero-img { height: 160px; }
             .card { padding: 10px; }
             .card h3 { font-size: 0.88rem; }
             .card ul li { font-size: 0.75rem; }
             .btn-sub-web { font-size: 0.72rem; min-height: 38px; padding: 4px 6px; }
             .section-title { font-size: 0.95rem; }
-            .btn { width: auto; min-width: 200px; font-size: 0.88rem; }
             header h1 { font-size: 1.3rem; }
             .hero-card h2 { font-size: 1.15rem; }
-            body { padding-bottom: 20px; }
+            .btn-bottom { font-size: 0.8rem; min-height: 34px; }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="โลโก้ เคเอส เซอร์วิส 89 ช่างซ่อมปั๊มน้ำ" class="header-logo">
+        <img src="logo-ks-service-89.png" alt="โลโก้ เคเอส เซอร์วิส 89 ช่างซ่อมปั๊มน้ำ" class="header-logo">
         <h1>เคเอส เซอร์วิส 89 ช่างซ่อมติดตั้งระบบปั๊มน้ำใกล้ฉัน</h1>
         <p>บริการซ่อม ติดตั้ง ปั๊มน้ำอาคาร โรงงาน คอนโด & งานระบบท่อประปา ครบวงจร</p>
     </header>
 
     <div class="container">
+        <!-- Hero Card -->
         <div class="hero-card">
             <h2>ช่างซ่อมและติดตั้งปั๊มน้ำ ปั๊มอาคารคอนโด บ้านพักอาศัย</h2>
             <p>บริการซ่อมและติดตั้งปั๊มน้ำ Booster Pump, Transfer Pump, ปั๊มจุ่ม, ไดโว่, ปั๊มสูบน้ำเสีย ตู้คอนโทรลปั๊มน้ำ สำหรับอาคาร คอนโด โรงงาน หมู่บ้าน และบ้านพักอาศัย</p>
+            <img src="ks-service-water-pump-repair.jpg" alt="ช่างซ่อมปั๊มน้ำ อาคาร คอนโด เคเอส เซอร์วิส 89" class="hero-img">
+        </div>
 
-        <!-- Main Layout: ซ้าย 74% (งานหลัก) / ขวา 24% (แถบบริการย่อยเล็กพิเศษ) -->
+        <!-- Main Layout: ซ้าย 74% / ขวา 24% -->
         <div class="main-content-layout">
             <!-- ฝั่งซ้าย: งานบริการหลัก -->
             <div class="services-column">
@@ -386,7 +401,7 @@
                 <div class="grid">
                     <div class="card">
                         <h3>🛠️ งานซ่อมติดตั้งปั๊มน้ำ</h3>
-                        <img src="service-pump.jpg" alt="ช่างซ่อมติดตั้งปั๊มน้ำ" class="img-responsive">
+                        <img src="booster-pump-repair-building.jpg" alt="ช่างซ่อมติดตั้งปั๊มน้ำอาคาร คอนโด" class="img-responsive">
                         <ul>
                             <li>ปั๊มน้ำอาคาร, คอนโด, โรงงาน</li>
                             <li>ซ่อมตู้คอนโทรลปั๊มน้ำ</li>
@@ -395,7 +410,7 @@
                     </div>
                     <div class="card">
                         <h3>🌊 ปั๊มจุ่ม ไดโว่ พญานาค</h3>
-                        <img src="service-submersible.jpg" alt="ปั๊มจุ่ม ไดโว่" class="img-responsive">
+                        <img src="submersible-divo-pump-repair.jpg" alt="ช่างซ่อมปั๊มจุ่ม ไดโว่ สูบน้ำเสีย" class="img-responsive">
                         <ul>
                             <li>ปั๊มสูบน้ำ, ปั๊มจุ่ม, ไดโว่</li>
                             <li>ซ่อมปั๊มสูบน้ำเสีย</li>
@@ -404,7 +419,7 @@
                     </div>
                     <div class="card">
                         <h3>🔧 ท่อประปา PVC, PPR</h3>
-                        <img src="service-pipe.jpg" alt="งานระบบท่อประปา" class="img-responsive">
+                        <img src="pvc-ppr-pipe-installation.jpg" alt="ช่างเดินระบบท่อประปา PVC PPR" class="img-responsive">
                         <ul>
                             <li>เดินระบบท่อ PVC / PPR</li>
                             <li>ติดตั้งตู้คอนโทรล</li>
@@ -412,7 +427,7 @@
                     </div>
                     <div class="card">
                         <h3>🏠 ปั๊มน้ำบ้านพักอาศัย</h3>
-                        <img src="service-home.jpg" alt="ซ่อมปั๊มน้ำบ้าน" class="img-responsive">
+                        <img src="home-water-pump-repair.jpg" alt="ช่างซ่อมปั๊มน้ำบ้าน แก้ไขประปารั่ว" class="img-responsive">
                         <ul>
                             <li>ช่างซ่อมปั๊มน้ำใกล้ฉัน</li>
                             <li>แก้ไขประปารั่วใต้พื้น</li>
@@ -421,7 +436,7 @@
                 </div>
             </div>
 
-            <!-- ฝั่งขวา: แถบบริการย่อย (สัดส่วนเล็กลง เป็นแนวตั้งเหมือนเดิม) -->
+            <!-- ฝั่งขวา: แถบบริการย่อย -->
             <div class="sidebar-column">
                 <h2 class="section-title">บริการอื่นๆ</h2>
                 <div class="sub-link-sidebar">
@@ -435,6 +450,7 @@
             </div>
         </div>
 
+        <!-- Location Box -->
         <div class="location-box">
             <h2 class="section-title">📍 พื้นที่ให้บริการ</h2>
             <p>เขตกรุงเทพฯฝั่งตะวันออก จังหวัดสมุทรปราการ & พื้นที่ใกล้เคียง <a href="tel:0827127490">โทร 082-712-7490</a></p>
@@ -457,20 +473,24 @@
             </div>
         </div>
         
+        <!-- Web Link & SEO Text -->
         <div class="web-btn-wrapper">
             <div class="seo-faint-text">
                 ช่างซ่อมปั๊มน้ำ พื้นที่ให้บริการ • ช่างปั๊มน้ำบางนา • ช่างปั๊มน้ำประเวศ • ช่างปั๊มน้ำอุดมสุข • ช่างปั๊มน้ำอ่อนนุช • ช่างปั๊มน้ำศรีนครินทร์
             </div>
-            <a href="https://www.ksservice89.com" target="_blank" class="btn btn-web">
-                <img src="logo.png" alt="Logo" class="btn-web-logo">
+            <a href="https://www.ksservice89.com" target="_blank" class="btn-web">
+                <img src="logo-ks-service-89.png" alt="Logo KS Service 89" class="btn-web-logo">
                 <span>เว็บไซต์หลัก www.ksservice89.com</span>
             </a>
             <div class="seo-faint-text">
                 ช่างปั๊มน้ำลาดกระบัง • ช่างปั๊มน้ำกิ่งแก้ว • ช่างปั๊มน้ำบางพลี • ช่างปั๊มน้ำสมุทรปราการ • ช่างซ่อมปั๊มน้ำใกล้ฉัน
-            </div
-                        <div class="btn-group-hero">
-                <a href="tel:0827127490" class="btn btn-call">📞 โทร: 082-712-7490</a>
-                <a href="https://line.me/ti/p/EUJqXVHGGA" target="_blank" rel="noopener" class="btn btn-line">💬 ทักไลน์สอบถาม</a>
+            </div>
+        </div>
+
+        <!-- ปุ่มโทร และ ปุ่มไลน์ ขนาดเล็กด้านล่าง -->
+        <div class="btn-group-bottom">
+            <a href="tel:0827127490" class="btn-bottom btn-call-bottom">📞 โทร: 082-712-7490</a>
+            <a href="https://line.me/ti/p/EUJqXVHGGA" target="_blank" rel="noopener" class="btn-bottom btn-line-bottom">💬 ทักไลน์สอบถาม</a>
         </div>
     </div>
 </body>
